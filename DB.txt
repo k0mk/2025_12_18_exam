@@ -1,0 +1,23 @@
+DROP DATABASE IF EXISTS exam;
+CREATE DATABASE exam;
+USE exam;
+
+CREATE TABLE article (
+	id INT PRIMARY KEY AUTO_INCREMENT
+	, memberId INT NOT NULL
+	, title varchar(100) NOT NULL
+	, content TEXT NOT NULL
+	, regDate DATETIME NOT NULL
+	, updateDate DATETIME NOT NULL
+);
+
+CREATE TABLE `member` (
+	id INT PRIMARY KEY AUTO_INCREMENT
+	, loginId varchar(50) NOT NULL
+	, loginPw varchar(200) NOT NULL
+	, `name` varchar(100) NOT NULL
+	, regDate DATETIME NOT NULL
+	, updateDate DATETIME NOT NULL
+);
+
+show table article;
